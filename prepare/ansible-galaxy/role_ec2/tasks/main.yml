@@ -1,0 +1,4 @@
+---
+- include: launch_ec2.yml
+- include: configure_jenkins.yml
+- include: terminate_ec2.yml

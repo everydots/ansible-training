@@ -1,0 +1,6 @@
+[vagrant]
+192.168.33.10
+
+[vagrant:vars]
+ansible_user=vagrant
+ansible_password=vagrant

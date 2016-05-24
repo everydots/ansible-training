@@ -1,0 +1,3 @@
+---
+# tasks file for role_common
+- include: file_util.yml

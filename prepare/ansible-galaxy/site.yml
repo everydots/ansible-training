@@ -1,0 +1,8 @@
+---
+ - name: Provision an EC instance
+   hosts: local
+   connection: local
+   gather_facts: false
+   tags: provisioning
+   roles:
+       - role_ec2

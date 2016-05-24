@@ -1,0 +1,20 @@
+---
+- name: "test ansible"
+  hosts: localhost
+  vars:
+    keypair: "testkeypair"
+    pub_key: "ssh-keygen: RSA"
+
+  tasks:
+    - name: "check status"
+      stat: path=~/Desktop/ansible-training/prepare/keypair/{{keypair}}
+      register: keypair_file
+
+    - name: "create keypair file"
+      file: path=~/Desktop/ansible-training/prepare/keypair/{{keypair}} state=touch mode=0777 force=yes
+
+    - name: "insert keypair content"
+      blockinfile:
+        dest: ~/Desktop/ansible-training/prepare/keypair/{{keypair}}
+        content: |
+             {{pub_key}}

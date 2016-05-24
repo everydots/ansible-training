@@ -1,0 +1,11 @@
+---
+# vars file for role_ec2
+      instance_type: t2.micro
+      security_group: webserver
+      image: ami-25c00c46
+      subnet_id: subnet-7af1ac0d
+      region: ap-southeast-1
+      keypair: ansible_ec2
+      count: 1
+      aws_access_key: AKIAJI3IZIWHV2X46DUA
+      aws_secret_key: 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
