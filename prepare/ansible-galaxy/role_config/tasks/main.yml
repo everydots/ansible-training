@@ -1,0 +1,13 @@
+---
+- name: Install JDK in ec2
+  apt:
+    update_cache: yes
+    pkg: oracle-java7-installer
+    state: latest
+    install_recommends: yes
+
+- name: Set Java 7 Env
+  apt:
+    pkg: oracle-java7-set-default
+    state: latest
+    install_recommends: yes

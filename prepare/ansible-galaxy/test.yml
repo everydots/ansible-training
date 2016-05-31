@@ -11,10 +11,13 @@
       register: keypair_file
 
     - name: "create keypair file"
-      file: path=~/Desktop/ansible-training/prepare/keypair/{{keypair}} state=touch mode=0777 force=yes
+      file: path=~/Desktop/ansible-training/prepare/keypair/{{keypair}} owner=mxxiao group=staff state=touch mode=0400 force=yes
 
     - name: "insert keypair content"
       blockinfile:
+        owner: mxxiao
+        group: staff
         dest: ~/Desktop/ansible-training/prepare/keypair/{{keypair}}
         content: |
              {{pub_key}}
+

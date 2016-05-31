@@ -6,3 +6,10 @@
    tags: provisioning
    roles:
        - role_ec2
+
+ - name: Configure EC2 instance
+   hosts: webserver
+   connection: local
+   tags: Config
+   roles:
+       # role_config
